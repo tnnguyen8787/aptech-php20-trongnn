@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Light Bulb Change Color</title>
+</head>
+<body>
+
+    <img id="light" src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg">
+    <br>
+    <button onclick="changeLight()">Turn on/off light</button>
+
+    <script>
+
+        let lightOff = "https://cdncontribute.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg";
+        let lightOn = "https://cdncontribute.geeksforgeeks.org/wp-content/uploads/ONbulb.jpg";
+
+
+        // function changeLight () {
+        //     let image = document.getElementById("light");
+        //     if (image.src === lightOff) {
+        //         image.src = lightOn;
+        //     } else {
+        //         image.src = lightOff;
+        //     }
+        // }
+
+        function changeLight () {
+            let image = document.getElementById("light");
+            if (image.src.match(lightOff)) { //using match() method
+                image.src = lightOn;
+            } else {
+                image.src = lightOff;
+            }
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

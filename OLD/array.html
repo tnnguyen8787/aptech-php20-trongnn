@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<p id="p"></p>
+<p id="p0"></p>
+<p id="p1"></p>
+<p id="p2"></p>
+<p id="p3"></p>
+<p id="p4"></p>
+<p id="p5"></p>
+<p id="p6"></p>
+
+
+<script>
+    //     let array = ["Nam", "Nguyen", "Trong", "Nhan", "Ha", "Trinh", "Vuong"];
+    //     for (var i = 0; i < array.length; i++) {
+    //         document.write(array[i] + "<br>");
+    // }
+
+
+    // let array = ["Nam", "Nguyen", "Trong", "Nhan", "Ha", "Trinh", "Vuong"];
+    // for (let i = 0; i < array.length; i++) {
+    //     console.log(array[i]);
+    //     document.getElementById("p" + i).innerHTML = array[i];
+    // }
+    //
+
+
+    let php19 = [{name: "nhan", age: 30, city: "vung tau"},
+        {name: "name", age: 22, city: "da nang"},
+        {name: "trinh", age: 27, city: "phu quoc"}
+    ];
+
+    for (let i = 0; i < php19.length; i++) {
+        document.getElementById("p" + i).innerHTML = php19[i].name + php19[i].age + php19[i].city ;
+    }
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
