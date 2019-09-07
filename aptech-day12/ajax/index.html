@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax</title>
+    <style>
+        button {
+            border: red solid 5px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="loadDoc()">Load Document Text</button>
+    <button onclick="loadLink()">Load from link</button>
+    <div id="display"></div>
+
+
+    <script>
+        function loadDoc() {
+            let load = new XMLHttpRequest();
+            load.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById('display').innerHTML = this.responseText;
+                }
+            }
+            load.open("GET", "note.txt", true);
+            load.send();
+        }
+
+        function loadLink() {
+            let loadL = new XMLHttpRequest();
+            loadL.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById('display').innerHTML = this.responseText;
+                }
+            }
+            loadL.open("GET", "https://namcoi.com/projects/users-crud-laravel/public/api/users", true);
+            loadL.send();
+        }
+
+
+
+        // function loading () {
+        //     let load = new XMLHttpRequest();
+        // }
+    </script>
+</body>
+
+
+<!-- function loadDoc() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+       document.getElementById("demo").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET", "ajax_info.txt", true);
+    xhttp.send();
+  } -->
+
+</html>
